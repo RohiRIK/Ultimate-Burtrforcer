@@ -10,6 +10,7 @@ from progress.spinner import MoonSpinner
 
 
 ####################### FTP BRURUTEFORCER #######################
+
 def process_ftp(host,username,password):
     try:
 
@@ -26,7 +27,6 @@ def process_ftp(host,username,password):
 
 def Burtrforce_ftp(host,username,path):
     passwords = Path(path)
-    # passlist = open(passwords).read().splitlines()
     with open(passwords, errors="ignore") as passlist:
         for password in passlist:
             password = ''.join(password.split("\n"))
@@ -35,9 +35,8 @@ def Burtrforce_ftp(host,username,path):
 
 
 
-####################### SFTP BRURUTEFORCER #######################
 
-# ###################### SSH BRURUTEFORCER #######################
+###################### SSH BRURUTEFORCER #######################
 
 def process_ssh(host,username,password):
 
@@ -72,8 +71,8 @@ def Burtrforce_ssh(host,username,path):
 
 
 
-# #######################  MAIN FUN #######################
-# #
+#######################  MAIN FUN #######################
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ultimate Burtrforcer")
     parser.add_argument("-S","--service", help="Which service do you wont to bruteforce")
